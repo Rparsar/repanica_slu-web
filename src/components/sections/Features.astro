@@ -1,0 +1,143 @@
+---
+---
+
+<section class="features" id="servicios">
+  <div class="features-container">
+    <div class="section-header">
+      <h2>Nuestros Servicios</h2>
+      <p>Soluciones completas para tu negocio</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📦</div>
+        <h3>Plantas Móviles</h3>
+        <p>Equipos de última tecnología para la extracción eficiente de áridos con máxima movilidad.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🔧</div>
+        <h3>Mantenimiento</h3>
+        <p>Servicio técnico especializado para garantizar el óptimo funcionamiento de tus equipos.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">👥</div>
+        <h3>Asesoramiento</h3>
+        <p>Expertos disponibles para ayudarte a elegir la solución más adecuada para tu proyecto.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Eficiencia</h3>
+        <p>Maximiza tu productividad con nuestras soluciones optimizadas y de bajo consumo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .features {
+    padding: 5rem 2rem;
+    background-color: #ffffff;
+  }
+
+  .features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .feature-card {
+    padding: 2rem;
+    background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .feature-card:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+
+  .feature-card:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .feature-card:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+
+  .feature-card:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #1a1a1a;
+  }
+
+  .feature-card p {
+    line-height: 1.6;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .features {
+      padding: 3rem 1rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.75rem;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      padding: 1.5rem;
+    }
+  }
+</style>

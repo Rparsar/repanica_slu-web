@@ -1,0 +1,240 @@
+---
+---
+
+<section class="about-business" id="init-servicios">
+  <div class="about-container">
+    <!-- Título y Subtítulo -->
+    <div class="section-intro">
+      <h2>Repánica SL. Cosecha los proyectos del mañana.</h2>
+      <p class="subtitle">Maquinaria de extracción de áridos</p>
+    </div>
+
+    <!-- Article 1: Texto izquierda, Imagen derecha -->
+    <article class="business-article article-1">
+      <div class="article-content">
+        <h3>Extracción de Áridos</h3>
+        <p>Somos especialistas en la extracción eficiente de áridos utilizando maquinaria de última generación. Nuestros equipos móviles permiten acceder a zonas de difícil acceso, maximizando la productividad y minimizando el impacto ambiental. Con más de 50 años de experiencia, garantizamos la calidad y seguridad en cada proyecto.</p>
+      </div>
+      <div class="article-image">
+        <img src="./src/assets/landing1.jpeg" alt="Extracción de Áridos" />
+      </div>
+    </article>
+
+    <!-- Article 2: Imagen izquierda, Texto derecha -->
+    <article class="business-article article-2">
+      <div class="article-image">
+        <img src="./src/assets/landing2.jpeg" alt="Procesamiento y Clasificación" />
+      </div>
+      <div class="article-content">
+        <h3>Procesamiento y Clasificación</h3>
+        <p>Contamos con plantas móviles de procesamiento que clasifican y procesan áridos según las especificaciones del cliente. Desde gravas hasta arenas, nuestros equipos garantizan la calidad del material final. Operamos en toda la región de Murcia, provincia de Alicante y alrededores con máxima eficiencia.</p>
+      </div>
+    </article>
+
+    <!-- Article 3: Texto izquierda, Imagen derecha -->
+    <article class="business-article article-3">
+      <div class="article-content">
+        <h3>Transporte y Logística</h3>
+        <p>Ofrecemos soluciones completas de transporte y logística para tus proyectos de extracción. Nuestro equipo profesional se encarga de la planificación, ejecución y seguimiento de cada operación. Disponemos de flota propia y alianzas estratégicas para garantizar entregas puntuales y seguras.</p>
+      </div>
+      <div class="article-image">
+        <img src="./src/assets/landing3.jpeg" alt="Transporte y Logística" />
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  .about-business {
+    padding: 5rem 2rem;
+    background-color: #ffffff;
+  }
+
+  .about-container {
+    max-width: 85%;
+    margin: 0 auto;
+  }
+
+  .section-intro {
+    margin-bottom: 4rem;
+    text-align: right;
+  }
+
+  .section-intro h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    color: #ff6b35;
+    font-weight: 600;
+  }
+
+  .business-article {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 0;
+    align-items: stretch;
+    margin-bottom: 4rem;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .business-article:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .business-article:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  .business-article:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+
+  /* Article 2: imagen izquierda 40%, texto derecha 60% */
+  .article-2 {
+    grid-template-columns: 40% 60%;
+  }
+
+  .article-2 .article-image {
+    order: -1;
+  }
+
+  /* Contenido de texto - fondo oscuro */
+  .article-content {
+    padding: 3rem;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .article-content h3 {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+  }
+
+  .article-content p {
+    color: #cccccc;
+    line-height: 1.8;
+  }
+
+  /* Imagen con overlay oscuro y degradado de fusión */
+  .article-image {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Tono oscuro sobre la imagen */
+  .article-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+  }
+
+  /* Degradado de fusión: article-1 y article-3 (imagen derecha → gradiente desde la izquierda) */
+  .article-1 .article-image::after,
+  .article-3 .article-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(26, 26, 26, 1) 0%, rgba(26, 26, 26, 0.4) 35%, transparent 70%);
+    z-index: 2;
+  }
+
+  /* Degradado de fusión: article-2 (imagen izquierda → gradiente desde la derecha) */
+  .article-2 .article-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to left, rgba(26, 26, 26, 1) 0%, rgba(26, 26, 26, 0.4) 35%, transparent 70%);
+    z-index: 2;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .business-article,
+    .article-2 {
+      grid-template-columns: 1fr;
+    }
+
+    .article-2 .article-image {
+      order: 0;
+    }
+
+    /* En móvil el degradado va de arriba (imagen) hacia abajo (texto) */
+    .article-1 .article-image::after,
+    .article-3 .article-image::after,
+    .article-2 .article-image::after {
+      background: linear-gradient(to bottom, transparent 40%, rgba(26, 26, 26, 0.8) 75%, rgba(26, 26, 26, 1) 100%);
+    }
+
+    .article-image {
+      min-height: 300px;
+    }
+
+    .section-intro h2 {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about-business {
+      padding: 3rem 1rem;
+    }
+
+    .section-intro {
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+
+    .section-intro h2 {
+      font-size: 1.5rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+    }
+
+    .article-content {
+      padding: 1.5rem;
+    }
+
+    .article-content h3 {
+      font-size: 1.25rem;
+    }
+
+    .article-image {
+      min-height: 250px;
+    }
+
+    .business-article {
+      margin-bottom: 2rem;
+    }
+  }
+</style>

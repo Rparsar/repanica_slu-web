@@ -1,11 +1,129 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/Header.astro';
+import Hero from '../components/sections/Hero.astro';
+import AboutBusiness from '../components/sections/AboutBusiness.astro';
+import CompanyAbout from '../components/sections/CompanyAbout.astro';
+import Services from '../components/sections/Services.astro';
+import Multimedia from '../components/sections/Multimedia.astro';
+import Benefits from '../components/sections/Benefits.astro';
+import CTA from '../components/sections/CTA.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Repanica SL - Alquiler de Plantas Móviles">
+  <Header />
+  <Hero />
+  <AboutBusiness />
+  <CompanyAbout />
+  <Services />
+  <Multimedia />
+  <Benefits />
+  <CTA />
+  <Footer />
+  <WhatsAppButton />
+
+  <script>
+    // Importar GSAP
+    import gsap from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Esperar a que el DOM esté completamente cargado
+    document.addEventListener('astro:page-load', () => {
+      // Animaciones de scroll para secciones
+      const sections = document.querySelectorAll('.about-business, .company-about, .services, .benefits, .cta');
+      
+      sections.forEach((section) => {
+        gsap.fromTo(
+          section,
+          {
+            opacity: 0,
+            y: 30,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            scrollTrigger: {
+              trigger: section,
+              start: 'top 80%',
+              end: 'top 20%',
+              toggleActions: 'play none none none',
+            },
+          }
+        );
+      });
+
+      // Animaciones para service cards
+      const serviceCards = document.querySelectorAll('.service-card');
+      serviceCards.forEach((card, index) => {
+        gsap.fromTo(
+          card,
+          {
+            opacity: 0,
+            y: 30,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            delay: index * 0.1,
+            scrollTrigger: {
+              trigger: card,
+              start: 'top 85%',
+              toggleActions: 'play none none none',
+            },
+          }
+        );
+      });
+
+      // Animaciones para benefit items
+      const benefitItems = document.querySelectorAll('.benefit-item');
+      benefitItems.forEach((item, index) => {
+        gsap.fromTo(
+          item,
+          {
+            opacity: 0,
+            x: -30,
+          },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 0.6,
+            delay: index * 0.1,
+            scrollTrigger: {
+              trigger: item,
+              start: 'top 85%',
+              toggleActions: 'play none none none',
+            },
+          }
+        );
+      });
+    });
+
+    // Smooth scroll para links de navegación
+    document.addEventListener('astro:page-load', () => {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href && href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              gsap.to(window, {
+                duration: 0.5,
+                scrollTo: {
+                  y: target,
+                  offsetY: 80,
+                },
+              });
+            }
+          }
+        });
+      });
+    });
+  </script>
 </Layout>

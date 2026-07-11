@@ -1,0 +1,256 @@
+---
+import introVideo from '../src/assets/intro-repanica.mp4';
+---
+
+<section class="hero" id="hero">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src={introVideo} type="video/mp4" />
+    Tu navegador no soporta videos HTML5.
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-side-panel"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1 class="hero-title">Construyendo un futuro firme</h1>
+      <h3 class="hero-subtitle">Soluciones confiables en alquiler de plantas móviles desde 1968</h3>
+      <div class="hero-buttons">
+        <button class="btn btn-primary">Ver proyectos</button>
+        <button class="btn btn-secondary">Más información</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    overflow: hidden;
+  }
+
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+
+  .hero-side-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #333333c4;
+    z-index: 2;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 2rem;
+  }
+
+  .hero-text {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    text-align: left;
+    color: white;
+    max-width: 600px;
+  }
+
+  .hero-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #ffffff;
+  }
+
+  .hero-subtitle {
+    color: #e8e8e8;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .btn {
+    padding: 0.875rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary {
+    background-color: #ff6b35;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background-color: #e55a2b;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+  }
+
+  .btn-secondary:hover {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .hero-content {
+      padding-left: 1.75rem;
+    }
+
+    .hero-title {
+      font-size: 4rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .hero-content {
+      padding-left: 1.5rem;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .hero-content {
+      padding-left: 1.25rem;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      min-height: 80vh;
+      padding: 2rem 1rem;
+    }
+
+    .hero-content {
+      padding-left: 1rem;
+    }
+
+    .hero-text {
+      max-width: 100%;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+      flex-direction: row;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      padding: 0.75rem 1.25rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .hero-content {
+      padding-left: 0.75rem;
+    }
+
+    .hero-title {
+      font-size: 2.25rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero-side-panel {
+      display: none;
+    }
+
+    .hero-content {
+      justify-content: center;
+      padding-left: 0;
+    }
+
+    .hero-text {
+      text-align: center;
+    }
+
+    .hero-buttons {
+      justify-content: center;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  }
+</style>

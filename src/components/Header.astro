@@ -1,0 +1,301 @@
+---
+import { Image } from 'astro:assets';
+import RepanicaLogo from '../assets/Repanica_logo.png';
+---
+
+<header class="header">
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <Image src={RepanicaLogo} alt="Repanica Logo" />
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#quienes-somos">¿Quienes somos?</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="language-selector">
+        <button class="language-button" id="languageBtn">
+          <span class="language-icon">🌐</span>
+          <span class="language-text">ES</span>
+        </button>
+        <div class="language-dropdown" id="languageDropdown">
+          <a href="#" data-lang="es" class="language-option active">
+            <span class="flag">🇪🇸</span> Español
+          </a>
+          <a href="#" data-lang="en" class="language-option">
+            <span class="flag">🇬🇧</span> English
+          </a>
+          <a href="#" data-lang="fr" class="language-option">
+            <span class="flag">🇫🇷</span> Français
+          </a>
+          <a href="#" data-lang="de" class="language-option">
+            <span class="flag">🇩🇪</span> Deutsch
+          </a>
+        </div>
+      </div>
+      <button class="cta-button">Llamar ahora</button>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: transparent;
+    border-bottom: 3px solid #f58300;
+    transition: all 0.3s ease;
+  }
+
+  .header.scrolled {
+    background-color: #ffffff;
+    border-bottom: 3px solid #f58300;
+  }
+
+  .navbar {
+    padding: 1rem 0;
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+
+  .nav-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .nav-menu a:hover {
+    color: #f58300;
+  }
+
+  .header.scrolled .nav-menu a {
+    color: #666;
+  }
+
+  .header.scrolled .nav-menu a:hover {
+    color: #f58300;
+  }
+
+  .cta-button {
+    background-color: #ff6b35;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background-color: #e55a2b;
+  }
+
+  .language-selector {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .language-button {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .language-icon {
+    font-size: 1.2rem;
+  }
+
+  .language-button:hover {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border-color: #f58300;
+  }
+
+  .header.scrolled .language-button {
+    border-color: #666;
+    color: #666;
+  }
+
+  .header.scrolled .language-button:hover {
+    background-color: #f58300;
+    color: #ffffff;
+    border-color: #f58300;
+  }
+
+  .language-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    border: 2px solid #f58300;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    min-width: 180px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .language-dropdown.active {
+    display: flex;
+  }
+
+  .language-option {
+    padding: 0.75rem 1rem;
+    color: #1a1a1a;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .language-option:last-child {
+    border-bottom: none;
+  }
+
+  .language-option:hover {
+    background-color: #f58300;
+    color: #ffffff;
+  }
+
+  .language-option.active {
+    background-color: #f58300;
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .flag {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-wrap: wrap;
+      padding: 0 1rem;
+    }
+
+    .nav-menu {
+      display: none;
+      gap: 1rem;
+      flex-basis: 100%;
+      margin-top: 1rem;
+      flex-direction: column;
+    }
+
+    .nav-menu.active {
+      display: flex;
+    }
+
+    .cta-button {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+</style>
+
+<script>
+  // Detectar scroll para cambiar estilo del header
+  const header = document.querySelector('.header');
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header?.classList.add('scrolled');
+    } else {
+      header?.classList.remove('scrolled');
+    }
+  });
+
+  // Selector de idiomas
+  const languageBtn = document.getElementById('languageBtn');
+  const languageDropdown = document.getElementById('languageDropdown');
+  const languageOptions = document.querySelectorAll('.language-option');
+  const languageText = document.querySelector('.language-text');
+
+  // Toggle dropdown
+  languageBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    languageDropdown?.classList.toggle('active');
+  });
+
+  // Cerrar dropdown al hacer click fuera
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.language-selector')) {
+      languageDropdown?.classList.remove('active');
+    }
+  });
+
+  // Cambiar idioma
+  languageOptions.forEach(option => {
+    option.addEventListener('click', (e) => {
+      e.preventDefault();
+      const lang = option.getAttribute('data-lang');
+      
+      // Actualizar clase activa
+      languageOptions.forEach(opt => opt.classList.remove('active'));
+      option.classList.add('active');
+      
+      // Actualizar texto del botón
+      const langCodes = {
+        'es': 'ES',
+        'en': 'EN',
+        'fr': 'FR',
+        'de': 'DE'
+      };
+      
+      if (languageText) {
+        languageText.textContent = langCodes[lang] || 'ES';
+      }
+      
+      // Cerrar dropdown
+      languageDropdown?.classList.remove('active');
+      
+      // Aquí iría la lógica para cambiar el idioma de la página
+      console.log('Idioma seleccionado:', lang);
+    });
+  });
+</script>
