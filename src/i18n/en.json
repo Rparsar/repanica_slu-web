@@ -1,0 +1,170 @@
+{
+  "nav": {
+    "inicio": "Home",
+    "quienesSomos": "About Us",
+    "servicios": "Services",
+    "proyectos": "Projects",
+    "contacto": "Contact",
+    "llamarAhora": "Call Now"
+  },
+  "hero": {
+    "titulo": "Solutions in Mobile Plant Rental",
+    "subtitulo": "Specialized equipment for aggregate extraction with maximum reliability",
+    "cta": "Request a quote"
+  },
+  "aboutBusiness": {
+    "titulo": "About Repanica SL",
+    "articulo1": {
+      "titulo": "Experience and Trust",
+      "descripcion": "With over 50 years in the industry, we are leaders in aggregate extraction solutions in the region."
+    },
+    "articulo2": {
+      "titulo": "Advanced Technology",
+      "descripcion": "Our mobile plants use the most modern technology to guarantee maximum efficiency."
+    },
+    "articulo3": {
+      "titulo": "Sustainability",
+      "descripcion": "Committed to environmentally friendly practices in all our projects."
+    }
+  },
+  "companyAbout": {
+    "titulo": "Who We Are",
+    "descripcion": "We are a company with over 50 years of experience in the aggregate extraction sector. Originally from Orihuela, we have grown to become leaders in the Murcia region, Alicante province and surrounding areas. Our commitment to quality, safety and sustainability has earned us the trust of hundreds of clients.",
+    "stats": {
+      "proyectos": "Projects Completed",
+      "clientes": "Satisfied Clients",
+      "anos": "Years of Experience",
+      "regiones": "Operating Regions"
+    }
+  },
+  "services": {
+    "label": "Our Services",
+    "titulo": "We count on services to cover your needs",
+    "descripcion": "We have specialized machinery for every type of aggregate extraction project.",
+    "verMas": "View More",
+    "items": {
+      "extraccion": {
+        "titulo": "Aggregate Extraction",
+        "descripcion": "Specialized equipment for efficient aggregate extraction in different types of terrain."
+      },
+      "procesamiento": {
+        "titulo": "Processing",
+        "descripcion": "Classification and processing of aggregates according to customer specifications."
+      },
+      "transporte": {
+        "titulo": "Logistics Transport",
+        "descripcion": "Complete transport and logistics solutions for your projects."
+      },
+      "asesoramiento": {
+        "titulo": "Technical Advice",
+        "descripcion": "Experts available to help you choose the most suitable solution."
+      },
+      "mantenimiento": {
+        "titulo": "Maintenance",
+        "descripcion": "Specialized technical service to ensure optimal operation."
+      },
+      "sostenibilidad": {
+        "titulo": "Sustainability",
+        "descripcion": "Committed to sustainable and environmentally friendly practices."
+      }
+    }
+  },
+  "projects": {
+    "label": "Portfolio",
+    "titulo": "Our Work",
+    "descripcion": "Learn about some of our most outstanding operations in Murcia, Alicante and surrounding provinces. We offer highly reliable mobile plants adapted to the scope of each project.",
+    "items": {
+      "lorca": {
+        "titulo": "Lorca Quarry Extraction",
+        "ano": "2025"
+      },
+      "orihuela": {
+        "titulo": "Orihuela Gravel Classification",
+        "ano": "2024"
+      },
+      "autovia": {
+        "titulo": "Mediterranean Highway Project",
+        "ano": "2024"
+      },
+      "murcia": {
+        "titulo": "Murcia Excavation and Demolition",
+        "ano": "2023"
+      }
+    }
+  },
+  "benefits": {
+    "label": "Benefits",
+    "titulo": "Why Choose Us",
+    "items": {
+      "experiencia": {
+        "titulo": "Proven Experience",
+        "descripcion": "Decades of industry experience guarantee quality results."
+      },
+      "tecnologia": {
+        "titulo": "Modern Technology",
+        "descripcion": "Latest generation equipment for maximum efficiency."
+      },
+      "servicio": {
+        "titulo": "Personalized Service",
+        "descripcion": "We adapt our solutions to your specific needs."
+      },
+      "seguridad": {
+        "titulo": "Guaranteed Safety",
+        "descripcion": "Full compliance with safety and hygiene regulations."
+      }
+    }
+  },
+  "cta": {
+    "titulo": "Ready to start your project?",
+    "descripcion": "Contact us today and receive a personalized consultation from our experts.",
+    "boton": "Request a Quote"
+  },
+  "contact": {
+    "hero": {
+      "titulo": "Contact",
+      "descripcion": "We are here to help. Contact us in the way you prefer."
+    },
+    "form": {
+      "titulo": "Get in Touch",
+      "descripcion": "Complete the form and we will contact you as soon as possible",
+      "nombre": "First Name",
+      "apellidos": "Last Name",
+      "telefono": "Phone",
+      "concepto": "Subject",
+      "conceptoOpciones": {
+        "selecciona": "Select a subject",
+        "consulta": "General Inquiry",
+        "alquiler": "Equipment Rental",
+        "presupuesto": "Request Quote",
+        "soporte": "Technical Support",
+        "otro": "Other"
+      },
+      "mensaje": "Message",
+      "enviar": "Send Message",
+      "exito": "✓ Your message has been sent successfully. We will contact you soon."
+    },
+    "location": {
+      "titulo": "Where We Are Located",
+      "subtitulo": "Visit us at our facilities in Orihuela, Alicante",
+      "direccion": "Address",
+      "direccionValor": "Ctra. de Beniel, Orihuela (Alicante)",
+      "telefono": "Phone",
+      "email": "Email",
+      "horario": "Hours",
+      "horarioLunes": "Monday to Friday: 8:00 - 18:00",
+      "horarioSabado": "Saturday: 9:00 - 14:00",
+      "horarioDomingo": "Sunday: Closed"
+    }
+  },
+  "footer": {
+    "empresa": "Repanica SL",
+    "descripcion": "Solutions in mobile plant rental for aggregate extraction.",
+    "enlaces": "Links",
+    "contacto": "Contact",
+    "email": "Email",
+    "telefonoLabel": "Phone",
+    "direccion": "Address",
+    "siguenos": "Follow Us",
+    "derechos": "All rights reserved."
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "nav": {
+    "inicio": "Inicio",
+    "quienesSomos": "¿Quiénes somos?",
+    "servicios": "Servicios",
+    "proyectos": "Proyectos",
+    "contacto": "Contacto",
+    "llamarAhora": "Llamar ahora"
+  },
+  "hero": {
+    "titulo": "Soluciones en Alquiler de Plantas Móviles",
+    "subtitulo": "Equipos especializados para extracción de áridos con máxima fiabilidad",
+    "cta": "Solicitar presupuesto"
+  },
+  "aboutBusiness": {
+    "titulo": "Sobre Repanica SL",
+    "articulo1": {
+      "titulo": "Experiencia y Confianza",
+      "descripcion": "Con más de 50 años en el sector, somos líderes en soluciones de extracción de áridos en la región."
+    },
+    "articulo2": {
+      "titulo": "Tecnología Avanzada",
+      "descripcion": "Nuestras plantas móviles utilizan la tecnología más moderna para garantizar eficiencia máxima."
+    },
+    "articulo3": {
+      "titulo": "Sostenibilidad",
+      "descripcion": "Comprometidos con prácticas respetuosas con el medio ambiente en todos nuestros proyectos."
+    }
+  },
+  "companyAbout": {
+    "titulo": "Quiénes somos",
+    "descripcion": "Somos una empresa con más de 50 años de trayectoria en el sector de la extracción de áridos. Originarios de Orihuela, hemos crecido para convertirnos en líderes en la región de Murcia, provincia de Alicante y alrededores. Nuestro compromiso con la calidad, la seguridad y la sostenibilidad nos ha permitido ganarnos la confianza de cientos de clientes.",
+    "stats": {
+      "proyectos": "Proyectos Realizados",
+      "clientes": "Clientes Satisfechos",
+      "anos": "Años de Experiencia",
+      "regiones": "Regiones Operativas"
+    }
+  },
+  "services": {
+    "label": "Nuestros servicios",
+    "titulo": "Contamos los servicios para cubrir tus necesidades",
+    "descripcion": "Disponemos de maquinaria especializada para cada tipo de proyecto en extracción de áridos.",
+    "verMas": "Ver más",
+    "items": {
+      "extraccion": {
+        "titulo": "Extracción de Áridos",
+        "descripcion": "Equipos especializados para la extracción eficiente de áridos en diferentes tipos de terreno."
+      },
+      "procesamiento": {
+        "titulo": "Procesamiento",
+        "descripcion": "Clasificación y procesamiento de áridos según especificaciones del cliente."
+      },
+      "transporte": {
+        "titulo": "Transporte Logístico",
+        "descripcion": "Soluciones completas de transporte y logística para tus proyectos."
+      },
+      "asesoramiento": {
+        "titulo": "Asesoramiento Técnico",
+        "descripcion": "Expertos disponibles para ayudarte a elegir la solución más adecuada."
+      },
+      "mantenimiento": {
+        "titulo": "Mantenimiento",
+        "descripcion": "Servicio técnico especializado para garantizar el óptimo funcionamiento."
+      },
+      "sostenibilidad": {
+        "titulo": "Sostenibilidad",
+        "descripcion": "Comprometidos con prácticas sostenibles y respetuosas con el medio ambiente."
+      }
+    }
+  },
+  "projects": {
+    "label": "Portafolio",
+    "titulo": "Nuestros Trabajos",
+    "descripcion": "Conoce algunas de nuestras operaciones más destacadas en Murcia, Alicante y provincias limítrofes. Ofrecemos plantas móviles de alta fiabilidad adaptadas a la envergadura de cada proyecto.",
+    "items": {
+      "lorca": {
+        "titulo": "Extracción Cantera Lorca",
+        "ano": "2025"
+      },
+      "orihuela": {
+        "titulo": "Clasificación de Gravas Orihuela",
+        "ano": "2024"
+      },
+      "autovia": {
+        "titulo": "Obra Autovía del Mediterráneo",
+        "ano": "2024"
+      },
+      "murcia": {
+        "titulo": "Excavación y Desmonte Murcia",
+        "ano": "2023"
+      }
+    }
+  },
+  "benefits": {
+    "label": "Ventajas",
+    "titulo": "Por qué elegirnos",
+    "items": {
+      "experiencia": {
+        "titulo": "Experiencia Probada",
+        "descripcion": "Décadas de experiencia en el sector garantizan resultados de calidad."
+      },
+      "tecnologia": {
+        "titulo": "Tecnología Moderna",
+        "descripcion": "Equipos de última generación para máxima eficiencia."
+      },
+      "servicio": {
+        "titulo": "Servicio Personalizado",
+        "descripcion": "Adaptamos nuestras soluciones a tus necesidades específicas."
+      },
+      "seguridad": {
+        "titulo": "Seguridad Garantizada",
+        "descripcion": "Cumplimiento total de normativas de seguridad e higiene."
+      }
+    }
+  },
+  "cta": {
+    "titulo": "¿Listo para comenzar tu proyecto?",
+    "descripcion": "Contacta con nosotros hoy y recibe una consulta personalizada de nuestros expertos.",
+    "boton": "Solicitar Presupuesto"
+  },
+  "contact": {
+    "hero": {
+      "titulo": "Contacto",
+      "descripcion": "Estamos aquí para ayudarte. Ponte en contacto con nosotros de la forma que prefieras."
+    },
+    "form": {
+      "titulo": "Ponte en contacto con nosotros",
+      "descripcion": "Completa el formulario y nos pondremos en contacto contigo lo antes posible",
+      "nombre": "Nombre",
+      "apellidos": "Apellidos",
+      "telefono": "Teléfono",
+      "concepto": "Concepto",
+      "conceptoOpciones": {
+        "selecciona": "Selecciona un concepto",
+        "consulta": "Consulta General",
+        "alquiler": "Alquiler de Equipos",
+        "presupuesto": "Solicitar Presupuesto",
+        "soporte": "Soporte Técnico",
+        "otro": "Otro"
+      },
+      "mensaje": "Mensaje",
+      "enviar": "Enviar Mensaje",
+      "exito": "✓ Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto pronto."
+    },
+    "location": {
+      "titulo": "Dónde nos encontramos",
+      "subtitulo": "Visítanos en nuestras instalaciones en Orihuela, Alicante",
+      "direccion": "Dirección",
+      "direccionValor": "Ctra. de Beniel, Orihuela (Alicante)",
+      "telefono": "Teléfono",
+      "email": "Email",
+      "horario": "Horario",
+      "horarioLunes": "Lunes a Viernes: 8:00 - 18:00",
+      "horarioSabado": "Sábado: 9:00 - 14:00",
+      "horarioDomingo": "Domingo: Cerrado"
+    }
+  },
+  "footer": {
+    "empresa": "Repanica SL",
+    "descripcion": "Soluciones en alquiler de plantas móviles para extracción de áridos.",
+    "enlaces": "Enlaces",
+    "contacto": "Contacto",
+    "email": "Email",
+    "telefonoLabel": "Teléfono",
+    "direccion": "Dirección",
+    "siguenos": "Síguenos en Redes",
+    "derechos": "Todos los derechos reservados."
+  }
+}

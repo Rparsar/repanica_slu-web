@@ -1,4 +1,10 @@
 ---
+import { Image } from 'astro:assets';
+import instagramIcon from '../assets/instagram.png';
+import facebookIcon from '../assets/facebook.png';
+import linkedinIcon from '../assets/linkedin.png';
+
+const currentYear = new Date().getFullYear();
 ---
 
 <footer class="footer">
@@ -21,28 +27,38 @@
         <h4>Contacto</h4>
         <p>Email: info@repanica.es</p>
         <p>Teléfono: +34 XXX XXX XXX</p>
+        <p> Dirección: Ctra. de Beniel, Orihuela (Alicante)</p>
       </div>
       <div class="footer-section">
-        <h4>Redes Sociales</h4>
-        <div class="social-links">
-          <a href="#" aria-label="LinkedIn">LinkedIn</a>
-          <a href="#" aria-label="Twitter">Twitter</a>
-          <a href="#" aria-label="Facebook">Facebook</a>
-        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1435.5607054424988!2d-0.9779787017288172!3d38.069079193744244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd639950afe9e2ef%3A0xefb6df67ca61b99d!2sCV-915%2C%2034-40%2C%2003312%20Orihuela%2C%20Alicante!5e1!3m2!1ses!2ses!4v1784725420638!5m2!1ses!2ses" width="400" height="250" style="border:0; border-radius: 0.5rem;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </div>
+    <div class="footer-rrss">
+      <p>Síguenos en redes</p>
+      <div class="social-links">
+        <a href="#" aria-label="Instagram" class="social-icon">
+          <Image src={instagramIcon} alt="Instagram" />
+        </a>
+        <a href="#" aria-label="Facebook" class="social-icon">
+          <Image src={facebookIcon} alt="Facebook" />
+        </a>
+        <a href="#" aria-label="LinkedIn" class="social-icon">
+          <Image src={linkedinIcon} alt="LinkedIn" />
+        </a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2024 Repanica SL. Todos los derechos reservados.</p>
+      <p>&copy; {currentYear} Repanica SL. Todos los derechos reservados.</p>
     </div>
   </div>
 </footer>
 
 <style>
   .footer {
-    background-color: #1a1a1a;
-    color: #ffffff;
+    background-color: var(--color-bg-dark);
+    color: var(--white);
     padding: 3rem 0 1rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
 
   .footer-container {
@@ -69,7 +85,7 @@
   }
 
   .footer-section p {
-    color: #cccccc;
+    color: var(--color-text-on-dark);
     margin-bottom: 0.5rem;
   }
 
@@ -82,25 +98,65 @@
   }
 
   .footer-section a {
-    color: #cccccc;
+    color: var(--color-text-on-dark);
     text-decoration: none;
     transition: color 0.3s ease;
   }
 
   .footer-section a:hover {
-    color: #ffffff;
+    color: var(--white);
+  }
+
+  .footer-rrss {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 2rem 0;
+  }
+
+  .footer-rrss p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
   }
 
   .social-links {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .social-icon:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-3px);
+  }
+
+  .social-icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+  }
+
+  .footer-section iframe {
+    margin-top: 1rem;
   }
 
   .footer-bottom {
-    border-top: 1px solid #333333;
+    border-top: 1px solid var(--color-border-dark);
     padding-top: 1rem;
     text-align: center;
-    color: #999999;
+    color: var(--color-text-muted);
   }
 
   @media (max-width: 768px) {

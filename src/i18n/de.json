@@ -1,0 +1,170 @@
+{
+  "nav": {
+    "inicio": "Startseite",
+    "quienesSomos": "Über Uns",
+    "servicios": "Dienstleistungen",
+    "proyectos": "Projekte",
+    "contacto": "Kontakt",
+    "llamarAhora": "Jetzt Anrufen"
+  },
+  "hero": {
+    "titulo": "Lösungen für Mietanlagen",
+    "subtitulo": "Spezialisierte Ausrüstung für Gesteinskörnungsgewinnung mit maximaler Zuverlässigkeit",
+    "cta": "Angebot anfordern"
+  },
+  "aboutBusiness": {
+    "titulo": "Über Repanica SL",
+    "articulo1": {
+      "titulo": "Erfahrung und Vertrauen",
+      "descripcion": "Mit über 50 Jahren Erfahrung in der Branche sind wir Marktführer bei Lösungen zur Gesteinskörnungsgewinnung in der Region."
+    },
+    "articulo2": {
+      "titulo": "Fortgeschrittene Technologie",
+      "descripcion": "Unsere mobilen Anlagen nutzen die modernste Technologie, um maximale Effizienz zu garantieren."
+    },
+    "articulo3": {
+      "titulo": "Nachhaltigkeit",
+      "descripcion": "Wir setzen uns für umweltfreundliche Praktiken in allen unseren Projekten ein."
+    }
+  },
+  "companyAbout": {
+    "titulo": "Wer Wir Sind",
+    "descripcion": "Wir sind ein Unternehmen mit über 50 Jahren Erfahrung im Bereich der Gesteinskörnungsgewinnung. Ursprünglich aus Orihuela stammend, sind wir zu Marktführern in der Region Murcia, Provinz Alicante und Umgebung herangewachsen. Unser Engagement für Qualität, Sicherheit und Nachhaltigkeit hat uns das Vertrauen von Hunderten von Kunden eingebracht.",
+    "stats": {
+      "proyectos": "Abgeschlossene Projekte",
+      "clientes": "Zufriedene Kunden",
+      "anos": "Jahre Erfahrung",
+      "regiones": "Betriebsregionen"
+    }
+  },
+  "services": {
+    "label": "Unsere Dienstleistungen",
+    "titulo": "Wir bieten Dienstleistungen für Ihre Anforderungen",
+    "descripcion": "Wir verfügen über spezialisierte Maschinen für jede Art von Gesteinskörnungsgewinnungsprojekt.",
+    "verMas": "Mehr Anzeigen",
+    "items": {
+      "extraccion": {
+        "titulo": "Gesteinskörnungsgewinnung",
+        "descripcion": "Spezialisierte Ausrüstung für effiziente Gesteinskörnungsgewinnung in verschiedenen Geländetypen."
+      },
+      "procesamiento": {
+        "titulo": "Verarbeitung",
+        "descripcion": "Klassifizierung und Verarbeitung von Gesteinskörnungen nach Kundenspezifikationen."
+      },
+      "transporte": {
+        "titulo": "Logistischer Transport",
+        "descripcion": "Komplette Transport- und Logistiklösungen für Ihre Projekte."
+      },
+      "asesoramiento": {
+        "titulo": "Technische Beratung",
+        "descripcion": "Experten helfen Ihnen, die am besten geeignete Lösung zu wählen."
+      },
+      "mantenimiento": {
+        "titulo": "Wartung",
+        "descripcion": "Spezialisierter technischer Service für optimalen Betrieb."
+      },
+      "sostenibilidad": {
+        "titulo": "Nachhaltigkeit",
+        "descripcion": "Engagiert für nachhaltige und umweltfreundliche Praktiken."
+      }
+    }
+  },
+  "projects": {
+    "label": "Portfolio",
+    "titulo": "Unsere Arbeiten",
+    "descripcion": "Erfahren Sie mehr über einige unserer bemerkenswertesten Operationen in Murcia, Alicante und Umgebung. Wir bieten hochzuverlässige mobile Anlagen, die auf den Umfang jedes Projekts abgestimmt sind.",
+    "items": {
+      "lorca": {
+        "titulo": "Steinbruchgewinnung Lorca",
+        "ano": "2025"
+      },
+      "orihuela": {
+        "titulo": "Kiesklassifizierung Orihuela",
+        "ano": "2024"
+      },
+      "autovia": {
+        "titulo": "Mittelmeerautobahn-Projekt",
+        "ano": "2024"
+      },
+      "murcia": {
+        "titulo": "Aushub und Abbruch Murcia",
+        "ano": "2023"
+      }
+    }
+  },
+  "benefits": {
+    "label": "Vorteile",
+    "titulo": "Warum Sie Uns Wählen Sollten",
+    "items": {
+      "experiencia": {
+        "titulo": "Bewährte Erfahrung",
+        "descripcion": "Jahrzehnte Branchenerfahrung garantieren hochwertige Ergebnisse."
+      },
+      "tecnologia": {
+        "titulo": "Moderne Technologie",
+        "descripcion": "Ausrüstung der neuesten Generation für maximale Effizienz."
+      },
+      "servicio": {
+        "titulo": "Persönlicher Service",
+        "descripcion": "Wir passen unsere Lösungen an Ihre spezifischen Anforderungen an."
+      },
+      "seguridad": {
+        "titulo": "Garantierte Sicherheit",
+        "descripcion": "Vollständige Einhaltung aller Sicherheits- und Hygienevorschriften."
+      }
+    }
+  },
+  "cta": {
+    "titulo": "Bereit, Ihr Projekt zu starten?",
+    "descripcion": "Kontaktieren Sie uns heute und erhalten Sie eine persönliche Beratung von unseren Experten.",
+    "boton": "Angebot Anfordern"
+  },
+  "contact": {
+    "hero": {
+      "titulo": "Kontakt",
+      "descripcion": "Wir sind hier, um Ihnen zu helfen. Kontaktieren Sie uns auf die Weise, die Sie bevorzugen."
+    },
+    "form": {
+      "titulo": "Kontaktieren Sie Uns",
+      "descripcion": "Füllen Sie das Formular aus und wir werden Sie so bald wie möglich kontaktieren",
+      "nombre": "Vorname",
+      "apellidos": "Nachname",
+      "telefono": "Telefon",
+      "concepto": "Betreff",
+      "conceptoOpciones": {
+        "selecciona": "Wählen Sie einen Betreff",
+        "consulta": "Allgemeine Anfrage",
+        "alquiler": "Ausrüstungsvermietung",
+        "presupuesto": "Angebot Anfordern",
+        "soporte": "Technischer Support",
+        "otro": "Sonstiges"
+      },
+      "mensaje": "Nachricht",
+      "enviar": "Nachricht Senden",
+      "exito": "✓ Ihre Nachricht wurde erfolgreich versendet. Wir werden Sie bald kontaktieren."
+    },
+    "location": {
+      "titulo": "Wo Sie Uns Finden",
+      "subtitulo": "Besuchen Sie uns in unseren Einrichtungen in Orihuela, Alicante",
+      "direccion": "Adresse",
+      "direccionValor": "Ctra. de Beniel, Orihuela (Alicante)",
+      "telefono": "Telefon",
+      "email": "Email",
+      "horario": "Öffnungszeiten",
+      "horarioLunes": "Montag bis Freitag: 8:00 - 18:00",
+      "horarioSabado": "Samstag: 9:00 - 14:00",
+      "horarioDomingo": "Sonntag: Geschlossen"
+    }
+  },
+  "footer": {
+    "empresa": "Repanica SL",
+    "descripcion": "Lösungen für Mietanlagen zur Gesteinskörnungsgewinnung.",
+    "enlaces": "Links",
+    "contacto": "Kontakt",
+    "email": "Email",
+    "telefonoLabel": "Telefon",
+    "direccion": "Adresse",
+    "siguenos": "Folgen Sie Uns",
+    "derechos": "Alle Rechte vorbehalten."
+  }
+}

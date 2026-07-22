@@ -10,36 +10,52 @@
       </div>
 
       <div class="company-image">
-        <div class="image-placeholder">Imagen Equipo</div>
+        <img src="./src/assets/escabadora.jpeg" alt="">
       </div>
     </div>
 
     <!-- Estadísticas -->
     <div class="stats-grid">
       <div class="stat-item">
-        <div class="stat-number">+40</div>
+        <div class="stat-number">+<span class="count" data-target="40">0</span></div>
         <div class="stat-label">Proyectos Realizados</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number">+50</div>
+        <div class="stat-number">+<span class="count" data-target="50">0</span></div>
         <div class="stat-label">Clientes Satisfechos</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number">50+</div>
+        <div class="stat-number">+<span class="count" data-target="50">0</span></div>
         <div class="stat-label">Años de Experiencia</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number">3</div>
+        <div class="stat-number"><span class="count" data-target="3">0</span></div>
         <div class="stat-label">Regiones Operativas</div>
       </div>
     </div>
   </div>
+
+  <!-- Línea divisoria animada al final de la sección -->
+  <div class="divider-line"></div>
 </section>
 
 <style>
   .company-about {
+    position: relative; /* Necesario para posicionar la línea divisoria absoluta de abajo */
     padding: 5rem 2rem;
-    background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+    background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-300) 100%);
+  }
+
+  .divider-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: var(--color-primary); /* naranja corporativo */
+    width: 100%;
+    transform-origin: left center;
+    transform: scaleX(0); /* inicia en 0 y escala con GSAP ScrollTrigger scrub */
+    z-index: 10;
   }
 
   .company-container {
@@ -58,7 +74,7 @@
   .company-text h2 {
     font-size: 2.25rem;
     font-weight: 700;
-    color: #1a1a1a;
+    color: var(--color-heading);
     margin-bottom: 1.5rem;
   }
 
@@ -71,14 +87,14 @@
     align-items: center;
     justify-content: center;
     min-height: 350px;
-    background: linear-gradient(135deg, #e8e8e8 0%, #d8d8d8 100%);
+    background: linear-gradient(135deg, var(--gray-400) 0%, var(--gray-600) 100%);
     border-radius: 1rem;
     overflow: hidden;
   }
 
   .image-placeholder {
     font-size: 1.25rem;
-    color: #999;
+    color: var(--gray-800);
     font-weight: 600;
   }
 
@@ -91,7 +107,7 @@
   .stat-item {
     text-align: center;
     padding: 2rem;
-    background-color: #ffffff;
+    background-color: var(--color-bg-card);
     border-radius: 1rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     opacity: 0;
@@ -117,13 +133,13 @@
   .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #ff6b35;
+    color: var(--color-primary);
     margin-bottom: 0.5rem;
   }
 
   .stat-label {
     font-size: 0.95rem;
-    color: #666;
+    color: var(--color-text);
     font-weight: 500;
   }
 

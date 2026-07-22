@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import ContactForm from '../components/sections/ContactForm.astro';
+import Location from '../components/sections/Location.astro';
+import CTA from '../components/sections/CTA.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+---
+
+<Layout title="Contacto - Repanica SL">
+  <Header />
+  
+  <section class="contact-hero">
+    <div class="contact-hero-content">
+      <h1>Contacto</h1>
+      <p>Estamos aquí para ayudarte. Ponte en contacto con nosotros de la forma que prefieras.</p>
+    </div>
+  </section>
+
+  <ContactForm />
+  <Location />
+  <CTA />
+  <Footer />
+  <WhatsAppButton />
+</Layout>
+
+<style>
+  .contact-hero {
+    background: linear-gradient(to top, var(--color-primary) 0%, #00000054 100%);
+    color: var(--color-white);
+    padding: 10% 2rem;
+    text-align: center;
+  }
+
+  .contact-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .contact-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .contact-hero p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    opacity: 0.95;
+  }
+
+  @media (max-width: 768px) {
+    .contact-hero {
+      padding: 4rem 1rem;
+    }
+
+    .contact-hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .contact-hero p {
+      font-size: 1.1rem;
+    }
+  }
+</style>

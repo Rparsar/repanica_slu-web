@@ -14,8 +14,8 @@
 <style>
   .cta {
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-darker) 100%);
+    color: var(--white);
   }
 
   .cta-container {
@@ -37,13 +37,13 @@
 
   .cta-content p {
     margin-bottom: 2rem;
-    color: #cccccc;
+    color: var(--color-text-on-dark);
     line-height: 1.6;
   }
 
   .cta-button {
-    background-color: #ff6b35;
-    color: white;
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-color);
     border: none;
     padding: 1rem 2.5rem;
     border-radius: 0.5rem;
@@ -54,9 +54,9 @@
   }
 
   .cta-button:hover {
-    background-color: #e55a2b;
+    background-color: var(--btn-primary-hover-bg);
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+    box-shadow: var(--btn-primary-shadow);
   }
 
   @keyframes fadeInScale {

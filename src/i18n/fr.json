@@ -1,0 +1,170 @@
+{
+  "nav": {
+    "inicio": "Accueil",
+    "quienesSomos": "À Propos",
+    "servicios": "Services",
+    "proyectos": "Projets",
+    "contacto": "Contact",
+    "llamarAhora": "Appeler Maintenant"
+  },
+  "hero": {
+    "titulo": "Solutions de Location de Centrales Mobiles",
+    "subtitulo": "Équipements spécialisés pour l'extraction d'agrégats avec fiabilité maximale",
+    "cta": "Demander un devis"
+  },
+  "aboutBusiness": {
+    "titulo": "À Propos de Repanica SL",
+    "articulo1": {
+      "titulo": "Expérience et Confiance",
+      "descripcion": "Avec plus de 50 ans d'expérience dans le secteur, nous sommes leaders en solutions d'extraction d'agrégats dans la région."
+    },
+    "articulo2": {
+      "titulo": "Technologie Avancée",
+      "descripcion": "Nos centrales mobiles utilisent la technologie la plus moderne pour garantir une efficacité maximale."
+    },
+    "articulo3": {
+      "titulo": "Durabilité",
+      "descripcion": "Engagés dans des pratiques respectueuses de l'environnement dans tous nos projets."
+    }
+  },
+  "companyAbout": {
+    "titulo": "Qui Sommes-Nous",
+    "descripcion": "Nous sommes une entreprise avec plus de 50 ans d'expérience dans le secteur de l'extraction d'agrégats. Originaires d'Orihuela, nous avons grandi pour devenir leaders dans la région de Murcie, province d'Alicante et régions environnantes. Notre engagement envers la qualité, la sécurité et la durabilité nous a permis de gagner la confiance de centaines de clients.",
+    "stats": {
+      "proyectos": "Projets Réalisés",
+      "clientes": "Clients Satisfaits",
+      "anos": "Années d'Expérience",
+      "regiones": "Régions Opérationnelles"
+    }
+  },
+  "services": {
+    "label": "Nos Services",
+    "titulo": "Nous comptons les services pour couvrir vos besoins",
+    "descripcion": "Nous disposons de machines spécialisées pour chaque type de projet d'extraction d'agrégats.",
+    "verMas": "Voir Plus",
+    "items": {
+      "extraccion": {
+        "titulo": "Extraction d'Agrégats",
+        "descripcion": "Équipements spécialisés pour l'extraction efficace d'agrégats dans différents types de terrain."
+      },
+      "procesamiento": {
+        "titulo": "Traitement",
+        "descripcion": "Classification et traitement des agrégats selon les spécifications du client."
+      },
+      "transporte": {
+        "titulo": "Transport Logistique",
+        "descripcion": "Solutions complètes de transport et de logistique pour vos projets."
+      },
+      "asesoramiento": {
+        "titulo": "Conseil Technique",
+        "descripcion": "Experts disponibles pour vous aider à choisir la solution la plus appropriée."
+      },
+      "mantenimiento": {
+        "titulo": "Maintenance",
+        "descripcion": "Service technique spécialisé pour assurer un fonctionnement optimal."
+      },
+      "sostenibilidad": {
+        "titulo": "Durabilité",
+        "descripcion": "Engagés dans des pratiques durables et respectueuses de l'environnement."
+      }
+    }
+  },
+  "projects": {
+    "label": "Portefeuille",
+    "titulo": "Nos Travaux",
+    "descripcion": "Découvrez certaines de nos opérations les plus remarquables en Murcie, Alicante et provinces environnantes. Nous proposons des centrales mobiles hautement fiables adaptées à l'envergure de chaque projet.",
+    "items": {
+      "lorca": {
+        "titulo": "Extraction Carrière Lorca",
+        "ano": "2025"
+      },
+      "orihuela": {
+        "titulo": "Classification Graviers Orihuela",
+        "ano": "2024"
+      },
+      "autovia": {
+        "titulo": "Projet Autoroute Méditerranée",
+        "ano": "2024"
+      },
+      "murcia": {
+        "titulo": "Excavation et Démolition Murcie",
+        "ano": "2023"
+      }
+    }
+  },
+  "benefits": {
+    "label": "Avantages",
+    "titulo": "Pourquoi Nous Choisir",
+    "items": {
+      "experiencia": {
+        "titulo": "Expérience Éprouvée",
+        "descripcion": "Des décennies d'expérience dans le secteur garantissent des résultats de qualité."
+      },
+      "tecnologia": {
+        "titulo": "Technologie Moderne",
+        "descripcion": "Équipements de dernière génération pour une efficacité maximale."
+      },
+      "servicio": {
+        "titulo": "Service Personnalisé",
+        "descripcion": "Nous adaptons nos solutions à vos besoins spécifiques."
+      },
+      "seguridad": {
+        "titulo": "Sécurité Garantie",
+        "descripcion": "Conformité totale aux réglementations de sécurité et d'hygiène."
+      }
+    }
+  },
+  "cta": {
+    "titulo": "Prêt à démarrer votre projet?",
+    "descripcion": "Contactez-nous aujourd'hui et recevez une consultation personnalisée de nos experts.",
+    "boton": "Demander un Devis"
+  },
+  "contact": {
+    "hero": {
+      "titulo": "Contact",
+      "descripcion": "Nous sommes là pour vous aider. Contactez-nous de la manière que vous préférez."
+    },
+    "form": {
+      "titulo": "Entrez en Contact",
+      "descripcion": "Complétez le formulaire et nous vous contacterons dès que possible",
+      "nombre": "Prénom",
+      "apellidos": "Nom",
+      "telefono": "Téléphone",
+      "concepto": "Sujet",
+      "conceptoOpciones": {
+        "selecciona": "Sélectionnez un sujet",
+        "consulta": "Demande Générale",
+        "alquiler": "Location d'Équipements",
+        "presupuesto": "Demander un Devis",
+        "soporte": "Support Technique",
+        "otro": "Autre"
+      },
+      "mensaje": "Message",
+      "enviar": "Envoyer le Message",
+      "exito": "✓ Votre message a été envoyé avec succès. Nous vous contacterons bientôt."
+    },
+    "location": {
+      "titulo": "Où Nous Trouver",
+      "subtitulo": "Visitez-nous dans nos installations à Orihuela, Alicante",
+      "direccion": "Adresse",
+      "direccionValor": "Ctra. de Beniel, Orihuela (Alicante)",
+      "telefono": "Téléphone",
+      "email": "Email",
+      "horario": "Horaires",
+      "horarioLunes": "Lundi à Vendredi: 8:00 - 18:00",
+      "horarioSabado": "Samedi: 9:00 - 14:00",
+      "horarioDomingo": "Dimanche: Fermé"
+    }
+  },
+  "footer": {
+    "empresa": "Repanica SL",
+    "descripcion": "Solutions de location de centrales mobiles pour l'extraction d'agrégats.",
+    "enlaces": "Liens",
+    "contacto": "Contact",
+    "email": "Email",
+    "telefonoLabel": "Téléphone",
+    "direccion": "Adresse",
+    "siguenos": "Suivez-Nous",
+    "derechos": "Tous droits réservés."
+  }
+}

@@ -6,37 +6,58 @@ import RepanicaLogo from '../assets/repanica_logo.png';
 <header class="header">
   <nav class="navbar">
     <div class="nav-container">
+      <!-- Hamburger button (mobile only) -->
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <div class="logo">
         <Image src={RepanicaLogo} alt="Repanica Logo" />
       </div>
-      <ul class="nav-menu">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#quienes-somos">¿Quienes somos?</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/#quienes-somos">¿Quienes somos?</a></li>
+        <li><a href="/#servicios">Servicios</a></li>
+        <li><a href="/#proyectos">Proyectos</a></li>
+        <li><a href="/contact">Contacto</a></li>
       </ul>
-      <div class="language-selector">
-        <button class="language-button" id="languageBtn">
-          <span class="language-icon">🌐</span>
-          <span class="language-text">ES</span>
-        </button>
-        <div class="language-dropdown" id="languageDropdown">
-          <a href="#" data-lang="es" class="language-option active">
-            <span class="flag">🇪🇸</span> Español
-          </a>
-          <a href="#" data-lang="en" class="language-option">
-            <span class="flag">🇬🇧</span> English
-          </a>
-          <a href="#" data-lang="fr" class="language-option">
-            <span class="flag">🇫🇷</span> Français
-          </a>
-          <a href="#" data-lang="de" class="language-option">
-            <span class="flag">🇩🇪</span> Deutsch
-          </a>
+
+      <div class="nav-actions">
+        <div class="language-selector">
+          <button class="language-button" id="languageBtn">
+            <span class="language-icon" id="languageFlagIcon">
+              <img src="https://flagcdn.com/w40/es.png" srcset="https://flagcdn.com/w80/es.png 2x" width="20" alt="España" style="display: block; border-radius: 2px;" />
+            </span>
+            <span class="language-text">ES</span>
+          </button>
+          <div class="language-dropdown" id="languageDropdown">
+            <a href="?lang=es" data-lang="es" class="language-option active">
+              <span class="flag">
+                <img src="https://flagcdn.com/w40/es.png" srcset="https://flagcdn.com/w80/es.png 2x" width="18" alt="España" style="display: block; border-radius: 2px;" />
+              </span> Español
+            </a>
+            <a href="?lang=en" data-lang="en" class="language-option">
+              <span class="flag">
+                <img src="https://flagcdn.com/w40/gb.png" srcset="https://flagcdn.com/w80/gb.png 2x" width="18" alt="United Kingdom" style="display: block; border-radius: 2px;" />
+              </span> English
+            </a>
+            <a href="?lang=fr" data-lang="fr" class="language-option">
+              <span class="flag">
+                <img src="https://flagcdn.com/w40/fr.png" srcset="https://flagcdn.com/w80/fr.png 2x" width="18" alt="Francia" style="display: block; border-radius: 2px;" />
+              </span> Français
+            </a>
+            <a href="?lang=de" data-lang="de" class="language-option">
+              <span class="flag">
+                <img src="https://flagcdn.com/w40/de.png" srcset="https://flagcdn.com/w80/de.png 2x" width="18" alt="Alemania" style="display: block; border-radius: 2px;" />
+              </span> Deutsch
+            </a>
+          </div>
         </div>
+        <button class="cta-button">Llamar ahora</button>
       </div>
-      <button class="cta-button">Llamar ahora</button>
     </div>
   </nav>
 </header>
@@ -49,17 +70,18 @@ import RepanicaLogo from '../assets/repanica_logo.png';
     width: 100%;
     z-index: 100;
     background-color: transparent;
-    border-bottom: 3px solid #f58300;
+    border-bottom: 3px solid var(--color-primary);
     transition: all 0.3s ease;
   }
 
   .header.scrolled {
-    background-color: #ffffff;
-    border-bottom: 3px solid #f58300;
+    background-color: var(--white);
+    border-bottom: 3px solid var(--color-primary-dark);
   }
 
   .navbar {
     padding: 1rem 0;
+    transition: all 0.3s ease;
   }
 
   .nav-container {
@@ -69,11 +91,13 @@ import RepanicaLogo from '../assets/repanica_logo.png';
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
   }
 
   .logo {
     display: flex;
     align-items: center;
+    height: 50px;
   }
 
   .logo img {
@@ -86,40 +110,49 @@ import RepanicaLogo from '../assets/repanica_logo.png';
     display: flex;
     list-style: none;
     gap: 2rem;
+    font-size: 18px;
   }
 
   .nav-menu a {
     text-decoration: none;
-    color: #ffffff;
+    color: var(--white);
     font-weight: 500;
     transition: color 0.3s ease;
   }
 
   .nav-menu a:hover {
-    color: #f58300;
+    color: var(--color-primary);
   }
 
   .header.scrolled .nav-menu a {
-    color: #666;
+    color: var(--color-text);
   }
 
   .header.scrolled .nav-menu a:hover {
-    color: #f58300;
+    color: var(--color-primary);
+  }
+
+  /* Contenedor unificado: language selector + CTA button */
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 
   .cta-button {
-    background-color: #ff6b35;
-    color: white;
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-color);
     border: none;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    white-space: nowrap;
   }
 
   .cta-button:hover {
-    background-color: #e55a2b;
+    background-color: var(--btn-primary-hover-bg);
   }
 
   .language-selector {
@@ -130,49 +163,51 @@ import RepanicaLogo from '../assets/repanica_logo.png';
 
   .language-button {
     background-color: transparent;
-    border: 2px solid #ffffff;
-    color: #ffffff;
-    padding: 0.5rem 1rem;
+    border: 1.5px solid var(--white);
+    color: var(--white);
+    padding: 0.71rem 0.8rem; /* Igualado el padding vertical para misma altura que cta-button */
     border-radius: 0.5rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 0.9rem;
+    gap: 0.35rem;
+    font-size: 0.82rem;
   }
 
   .language-icon {
-    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .language-button:hover {
-    background-color: #ffffff;
-    color: #1a1a1a;
-    border-color: #f58300;
+    background-color: var(--color-primary);
+    color: var(--white);
+    border-color: var(--color-primary);
   }
 
   .header.scrolled .language-button {
-    border-color: #666;
-    color: #666;
+    border-color: var(--color-text);
+    color: var(--color-text);
   }
 
   .header.scrolled .language-button:hover {
-    background-color: #f58300;
-    color: #ffffff;
-    border-color: #f58300;
+    background-color: var(--color-primary);
+    color: var(--white);
+    border-color: var(--color-primary);
   }
 
   .language-dropdown {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: #ffffff;
-    border: 2px solid #f58300;
+    background-color: var(--color-bg-card);
+    border: 2px solid var(--color-primary-dark);
     border-radius: 0.5rem;
     margin-top: 0.5rem;
-    min-width: 180px;
+    min-width: 140px;
     display: none;
     flex-direction: column;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -184,14 +219,15 @@ import RepanicaLogo from '../assets/repanica_logo.png';
   }
 
   .language-option {
-    padding: 0.75rem 1rem;
-    color: #1a1a1a;
+    padding: 0.45rem 0.75rem;
+    color: var(--color-secondary);
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
     transition: all 0.3s ease;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid var(--color-border-subtle);
+    font-size: 0.85rem;
   }
 
   .language-option:last-child {
@@ -199,41 +235,203 @@ import RepanicaLogo from '../assets/repanica_logo.png';
   }
 
   .language-option:hover {
-    background-color: #f58300;
-    color: #ffffff;
+    background-color: var(--color-primary-light);
+    color: var(--white);
   }
 
   .language-option.active {
-    background-color: #f58300;
-    color: #ffffff;
+    background-color: var(--color-primary);
+    color: var(--white);
     font-weight: 600;
   }
 
   .flag {
-    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  @media (max-width: 768px) {
-    .nav-container {
-      flex-wrap: wrap;
-      padding: 0 1rem;
+  /* Hamburger button — oculto en desktop */
+  .hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    z-index: 101;
+    flex-shrink: 0;
+  }
+
+  .hamburger-btn span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--white);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .header.scrolled .hamburger-btn span {
+    background-color: var(--color-secondary);
+  }
+
+  /* Animación X al abrir */
+  .hamburger-btn.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .hamburger-btn.active span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  .hamburger-btn.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* ── Mobile ≤770px ─────────────────────────────────────── */
+  @media (max-width: 770px) {
+    .navbar {
+      padding: 0;
     }
 
+    .nav-container {
+      position: relative;
+      padding: 0 1rem;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      min-height: 72px; /* Altura de cabecera constante e ideal para móvil */
+    }
+
+    /* Hamburger visible */
+    .hamburger-btn {
+      display: flex;
+      order: 1;
+      align-self: center;
+    }
+
+    /* Logo centrado de forma absoluta arriba de forma permanente y contenido dentro del navbar */
+    .logo {
+      position: absolute;
+      left: 50%;
+      top: 11px; /* (72px total - 50px logo) / 2 = 11px para centrado vertical perfecto */
+      transform: translateX(-50%);
+      order: 2;
+      height: 50px;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Actions a la derecha */
+    .nav-actions {
+      order: 3;
+      gap: 0.35rem;
+      align-self: center;
+    }
+
+    /* Nav menu: desplegado debajo de la línea divisoria naranja del header */
     .nav-menu {
       display: none;
-      gap: 1rem;
-      flex-basis: 100%;
-      margin-top: 1rem;
+      position: absolute;
+      top: 100%; /* Despliega justo debajo del borde inferior del header (línea naranja) */
+      left: 1rem; /* Margen flotante izquierdo alineado con el layout */
+      right: 1rem; /* Margen flotante derecho alineado con el layout */
+      width: auto; /* Ancho auto-calculado entre el margen izquierdo y derecho */
       flex-direction: column;
+      gap: 0;
+      margin-top: 0.5rem; /* Pequeño espacio para efecto flotante premium */
+      padding: 0;
+      list-style: none;
+      background-color: var(--color-primary); /* #ff6b35 original */
+      border-radius: 0.5rem; /* Bordes redondeados de vuelta */
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      z-index: 99;
     }
 
     .nav-menu.active {
       display: flex;
     }
 
+    .nav-menu li {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .nav-menu li:last-child {
+      border-bottom: none;
+    }
+
+    /* Links blancos sobre fondo naranja */
+    .nav-menu a {
+      color: var(--white);
+      padding: 0.875rem 1.5rem;
+      display: block;
+      position: relative;
+      font-weight: 500;
+      overflow: hidden;
+    }
+
+    /* Línea blanca animada al hacer hover */
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      bottom: 8px;
+      left: 1.5rem;
+      width: 0;
+      height: 2px;
+      background-color: var(--white);
+      border-radius: 1px;
+      transition: width 0.3s ease;
+    }
+
+    .nav-menu a:hover {
+      color: var(--white);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-menu a:hover::after {
+      width: calc(100% - 3rem);
+    }
+
+    /* Neutralizar overrides de scrolled en mobile */
+    .header.scrolled .nav-menu a {
+      color: var(--white);
+    }
+
+    .header.scrolled .nav-menu a:hover {
+      color: var(--white);
+    }
+
+    /* Reducir tamaño del language button y alinearlo con cta-button */
+    .language-button {
+      padding: 0.46rem 0.6rem; /* Incrementado para igualar altura de cta-button en móvil */
+      font-size: 0.75rem;
+      gap: 0.25rem;
+    }
+
+    .language-icon img {
+      width: 16px;
+    }
+
+    /* Reducir tamaño del CTA */
     .cta-button {
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
+      padding: 0.5rem 0.875rem;
+      font-size: 0.82rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cta-button {
+      padding: 0.4rem 0.65rem;
+      font-size: 0.78rem;
+    }
+
+    .language-button {
+      padding: 0.36rem 0.5rem; /* Ajustado para misma altura de cta-button en móvil pequeño */
+      font-size: 0.72rem;
     }
   }
 </style>
@@ -250,11 +448,84 @@ import RepanicaLogo from '../assets/repanica_logo.png';
     }
   });
 
-  // Selector de idiomas
+  // ── Menú hamburguesa ──────────────────────────────────────
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const navMenu = document.getElementById('navMenu');
+
+  hamburgerBtn?.addEventListener('click', () => {
+    hamburgerBtn.classList.toggle('active');
+    navMenu?.classList.toggle('active');
+  });
+
+  // Cerrar menú al hacer click en un enlace
+  navMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburgerBtn?.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
+
+  // ── Selector de idiomas ───────────────────────────────────
   const languageBtn = document.getElementById('languageBtn');
   const languageDropdown = document.getElementById('languageDropdown');
   const languageOptions = document.querySelectorAll('.language-option');
   const languageText = document.querySelector('.language-text');
+  const languageFlagIcon = document.getElementById('languageFlagIcon');
+
+  const langCodes: Record<string, string> = {
+    'es': 'ES',
+    'en': 'EN',
+    'fr': 'FR',
+    'de': 'DE'
+  };
+
+  const langFlags: Record<string, string> = {
+    'es': 'https://flagcdn.com/w40/es.png',
+    'en': 'https://flagcdn.com/w40/gb.png',
+    'fr': 'https://flagcdn.com/w40/fr.png',
+    'de': 'https://flagcdn.com/w40/de.png'
+  };
+
+  const langFlagAlt: Record<string, string> = {
+    'es': 'España',
+    'en': 'United Kingdom',
+    'fr': 'Francia',
+    'de': 'Alemania'
+  };
+
+  // Función para actualizar el idioma visual del header
+  function updateLanguageDisplay(lang: string) {
+    // Actualizar clase activa en opciones
+    languageOptions.forEach(opt => {
+      if (opt.getAttribute('data-lang') === lang) {
+        opt.classList.add('active');
+      } else {
+        opt.classList.remove('active');
+      }
+    });
+    
+    // Actualizar texto e icono del botón
+    if (languageText) {
+      languageText.textContent = langCodes[lang] ?? 'ES';
+    }
+    if (languageFlagIcon) {
+      const flagImg = languageFlagIcon.querySelector('img');
+      if (flagImg) {
+        flagImg.src = langFlags[lang];
+        flagImg.srcset = langFlags[lang].replace('w40', 'w80') + ' 2x';
+        flagImg.alt = langFlagAlt[lang];
+      }
+    }
+  }
+
+  // Obtener idioma actual de la URL
+  function getCurrentLanguage(): string {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('lang') || 'es';
+  }
+
+  // Inicializar display del idioma al cargar la página
+  updateLanguageDisplay(getCurrentLanguage());
 
   // Toggle dropdown
   languageBtn?.addEventListener('click', (e) => {
@@ -264,7 +535,7 @@ import RepanicaLogo from '../assets/repanica_logo.png';
 
   // Cerrar dropdown al hacer click fuera
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('.language-selector')) {
+    if (!(e.target as Element).closest('.language-selector')) {
       languageDropdown?.classList.remove('active');
     }
   });
@@ -273,29 +544,15 @@ import RepanicaLogo from '../assets/repanica_logo.png';
   languageOptions.forEach(option => {
     option.addEventListener('click', (e) => {
       e.preventDefault();
-      const lang = option.getAttribute('data-lang');
+      const lang = option.getAttribute('data-lang') || 'es';
       
-      // Actualizar clase activa
-      languageOptions.forEach(opt => opt.classList.remove('active'));
-      option.classList.add('active');
-      
-      // Actualizar texto del botón
-      const langCodes = {
-        'es': 'ES',
-        'en': 'EN',
-        'fr': 'FR',
-        'de': 'DE'
-      };
-      
-      if (languageText) {
-        languageText.textContent = langCodes[lang] || 'ES';
-      }
+      // Actualizar display
+      updateLanguageDisplay(lang);
       
       // Cerrar dropdown
       languageDropdown?.classList.remove('active');
       
-      // Aquí iría la lógica para cambiar el idioma de la página
-      console.log('Idioma seleccionado:', lang);
+      // La navegación ocurre automáticamente porque el href es ?lang=xx
     });
   });
 </script>

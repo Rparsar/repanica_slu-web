@@ -1,7 +1,19 @@
 ---
+import { Image } from 'astro:assets';
+import mechanicalGear from './src/assets/Mechanical_gear_forming_circle_2K_202607221251.png';
 ---
 
 <section class="services" id="servicios">
+  <!-- Engranaje superior izquierdo decorativo de fondo -->
+  <div class="gear-bg gear-top-left">
+    <Image src={mechanicalGear} alt="Engranaje decorativo" class="gear-img-file" />
+  </div>
+
+  <!-- Engranaje inferior derecho decorativo de fondo -->
+  <div class="gear-bg gear-bottom-right">
+    <Image src={mechanicalGear} alt="Engranaje decorativo" class="gear-img-file" />
+  </div>
+
   <div class="services-container">
     <div class="section-header">
       <div class="header-content">
@@ -86,15 +98,65 @@
       </div>
     </div>
   </div>
+  <div class="divider-line"></div>
 </section>
 
 <style>
   .services {
+    position: relative; /* Necesario para los engranajes absolutos de fondo */
+    overflow: hidden; /* Evita que los engranajes gigantes causen scroll horizontal */
     padding: 5rem 2rem;
-    background-color: #ffffff;
+    background-color: var(--color-bg-page);
+  }
+
+  .divider-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: var(--color-primary); /* naranja corporativo */
+    width: 100%;
+    transform-origin: left center;
+    transform: scaleX(0); /* inicia en 0 y escala con GSAP ScrollTrigger scrub */
+    z-index: 10;
+  }
+
+  /* Engranajes decorativos de fondo con animación Scroll-triggered scrub */
+  .gear-bg {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    z-index: 1; /* Por detrás del contenido */
+    color: var(--color-primary);
+  }
+
+  .gear-top-left {
+    top: -160px;
+    left: -160px;
+    width: 360px;
+    height: 360px;
+    opacity: 0; /* Controlado dinámicamente con GSAP (aparecerá a 0.18) */
+  }
+
+  .gear-bottom-right {
+    bottom: -160px;
+    right: -160px;
+    width: 360px;
+    height: 360px;
+    opacity: 0.18; /* Inicia sutilmente visible y GSAP lo desvanece a 0 (incrementado de 0.08 a 0.18) */
+  }
+
+  .gear-bg .gear-img-file,
+  .gear-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 15px rgba(255, 107, 53, 0.20)); /* Sombra proyectada naranja */
   }
 
   .services-container {
+    position: relative;
+    z-index: 2; /* Por delante de los engranajes */
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -113,7 +175,7 @@
 
   .section-label {
     font-size: 0.9rem;
-    color: #ff6b35;
+    color: var(--color-primary);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -124,14 +186,14 @@
   .section-header h2 {
     font-size: 2.25rem;
     font-weight: 700;
-    color: #1a1a1a;
+    color: var(--color-heading);
     margin-bottom: 1rem;
     line-height: 1.3;
   }
 
   .section-description {
     font-size: 1rem;
-    color: #666;
+    color: var(--color-text);
     line-height: 1.6;
   }
 
@@ -139,8 +201,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #ff6b35;
-    color: white;
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-color);
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     text-decoration: none;
@@ -151,9 +213,9 @@
   }
 
   .view-more-btn:hover {
-    background-color: #e55a2b;
+    background-color: var(--btn-primary-hover-bg);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+    box-shadow: var(--btn-primary-shadow-sm);
   }
 
   .services-grid {
@@ -164,7 +226,7 @@
 
   .service-card {
     padding: 2rem;
-    background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+    background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-300) 100%);
     border-radius: 1rem;
     transition: all 0.3s ease;
     opacity: 0;
@@ -199,14 +261,14 @@
   .service-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-    border-color: #ff6b35;
+    border-color: var(--color-primary);
   }
 
   .service-icon {
     width: 50px;
     height: 50px;
     margin-bottom: 1.5rem;
-    color: #ff6b35;
+    color: var(--color-primary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -220,7 +282,7 @@
   .service-card h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #1a1a1a;
+    color: var(--color-heading);
     margin-bottom: 0.75rem;
   }
 

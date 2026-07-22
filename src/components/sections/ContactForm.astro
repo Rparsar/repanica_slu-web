@@ -1,0 +1,205 @@
+---
+---
+
+<section class="contact-form-section">
+  <div class="contact-container">
+    <div class="form-header">
+      <h2>Ponte en contacto con nosotros</h2>
+      <p>Completa el formulario y nos pondremos en contacto contigo lo antes posible</p>
+    </div>
+
+    <form class="contact-form" id="contactForm" method="POST" action="https://formspree.io/f/xyzabc123">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
+      </div>
+
+      <div class="form-group">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" id="apellidos" name="apellidos" required placeholder="Tus apellidos" />
+      </div>
+
+      <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" required placeholder="+34 XXX XXX XXX" />
+      </div>
+
+      <div class="form-group">
+        <label for="concepto">Concepto</label>
+        <select id="concepto" name="concepto" required>
+          <option value="">Selecciona un concepto</option>
+          <option value="consulta-general">Consulta General</option>
+          <option value="alquiler">Alquiler de Equipos</option>
+          <option value="presupuesto">Solicitar Presupuesto</option>
+          <option value="soporte">Soporte Técnico</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
+
+      <div class="form-group full-width">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" required placeholder="Cuéntanos tu consulta..." rows="6"></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Enviar Mensaje</button>
+    </form>
+
+    <div class="form-success-message" id="successMessage" style="display: none;">
+      <p>✓ Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto pronto.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-form-section {
+    padding: 6rem 2rem;
+    background-color: var(--color-bg-page);
+  }
+
+  .contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .form-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .form-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .form-header p {
+    font-size: 1.1rem;
+    color: var(--color-text);
+    line-height: 1.6;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group.full-width {
+    grid-column: 1 / -1;
+  }
+
+  .form-group label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-heading);
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--color-medium-gray);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: var(--color-white);
+    color: var(--color-heading);
+    transition: all 0.3s ease;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: var(--color-text);
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+
+  .submit-btn {
+    padding: 1rem 2rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+  }
+
+  .submit-btn:hover {
+    background-color: #ff5a1f;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+  }
+
+  .submit-btn:active {
+    transform: translateY(0);
+  }
+
+  .form-success-message {
+    background-color: #d4edda;
+    border: 2px solid #28a745;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    color: #155724;
+    font-weight: 600;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .contact-form-section {
+      padding: 4rem 1rem;
+    }
+
+    .form-header h2 {
+      font-size: 2rem;
+    }
+
+    .form-header p {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<script>
+  const initContactForm = () => {
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+
+    if (!form) return;
+
+    form.addEventListener('submit', (e) => {
+      // Formspree maneja el envío automáticamente
+      // Aquí podemos agregar validación adicional si es necesario
+    });
+  };
+
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    initContactForm();
+  } else {
+    document.addEventListener('DOMContentLoaded', initContactForm);
+  }
+
+  document.addEventListener('astro:page-load', initContactForm);
+</script>

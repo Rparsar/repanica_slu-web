@@ -2,9 +2,7 @@
 ---
 
 <a href="https://wa.me/34658803859?text=SOLICITAR%20PRESUPUESTO" target="_blank" rel="noopener noreferrer" class="whatsapp-button" aria-label="Contactar por WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.052 0-2.082.398-2.847 1.12-.735.71-1.14 1.656-1.14 2.676 0 1.08.438 2.096 1.2 2.847l-.06.095c-.036.057-.063.1-.09.145-1.417-1.126-2.307-2.834-2.307-4.767 0-3.488 2.808-6.296 6.296-6.296 1.684 0 3.27.633 4.49 1.77-1.169-.165-2.27.27-3.045 1.066-.704.681-1.092 1.618-1.092 2.676 0 .112.003.224.009.335-.733-.041-1.425.195-1.945.715-.573.556-.888 1.338-.888 2.19 0 .35.048.694.14 1.025-.045-.002-.09-.003-.135-.003"/>
-  </svg>
+  <img src="/src/assets/whatsapp.png" width="40px" alt="WhatsApp"/>
 </a>
 
 <style>
@@ -14,20 +12,20 @@
     right: 2rem;
     width: 60px;
     height: 60px;
-    background-color: #25d366;
+    background-color: var(--color-whatsapp);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
+    color: var(--white);
     text-decoration: none;
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 4px 12px var(--color-whatsapp-shadow);
     transition: all 0.3s ease;
     z-index: 99;
   }
 
   .whatsapp-button:hover {
-    background-color: #20ba5a;
+    background-color: var(--color-whatsapp-hover);
     box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
     transform: scale(1.1);
   }

@@ -1,0 +1,103 @@
+/* ═══════════════════════════════════════════════════════════════
+   REPANICA SL — Design Tokens: Colors
+   src/styles/colors.css
+
+   Uso:  var(--color-primary)  →  #ff6b35
+   Todos los colores del proyecto se definen aquí. No escribas
+   valores hex directamente en los componentes; usa las variables.
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+
+  /* ── Brand / Marca ──────────────────────────────────────────
+     Naranja corporativo de Repanica SL
+  ──────────────────────────────────────────────────────────── */
+  --brand-orange:        #ff6b35;   /* Naranja principal */
+  --brand-orange-dark:   #f58300;   /* Naranja oscuro (border header, activos) */
+  --brand-orange-hover:  #e55a2b;   /* Naranja hover botón primario */
+  --brand-orange-light:  #fa906a;   /* Naranja suave (estados seleccionados) */
+
+  /* ── Neutrales base ─────────────────────────────────────────
+     Negro, blanco y el oscuro del CTA/footer
+  ──────────────────────────────────────────────────────────── */
+  --white:       #ffffff;
+  --black:       #1a1a1a;   /* Negro suave (texto principal, fondo dark) */
+  --dark:        #333333;   /* Gris muy oscuro (CTA bg, footer border) */
+
+  /* ── Escala de grises ───────────────────────────────────────
+     De más claro (100) a más oscuro (900)
+  ──────────────────────────────────────────────────────────── */
+  --gray-100:    #f9f9f9;   /* Fondo tarjetas muy claras */
+  --gray-200:    #f5f5f5;   /* Fondo secciones claras */
+  --gray-300:    #f0f0f0;   /* Fondo gradiente claro */
+  --gray-400:    #e8e8e8;   /* Bordes suaves, medium-gray */
+  --gray-500:    #e5e5e5;   /* Bordes dropdown / separadores */
+  --gray-600:    #d0d0d0;   /* Dividers, escala media */
+  --gray-700:    #cccccc;   /* Texto sobre fondos oscuros */
+  --gray-800:    #999999;   /* Texto muted / pie de página */
+  --gray-900:    #666666;   /* Texto secundario genérico */
+
+  /* ── Semánticos de uso general ──────────────────────────────
+     Aliases con nombre funcional que referencian los valores
+     anteriores. Estos son los que debes usar en los componentes.
+  ──────────────────────────────────────────────────────────── */
+
+  /* Colores de acción / brand */
+  --color-primary:        var(--brand-orange);
+  --color-primary-dark:   var(--brand-orange-dark);
+  --color-primary-hover:  var(--brand-orange-hover);
+  --color-primary-light:  var(--brand-orange-light);
+  --color-primary-focus:  rgba(255, 107, 53, 0.15);  /* Focus ring inputs */
+
+  /* Texto */
+  --color-text:           var(--gray-900);    /* Texto secundario / descriptivo */
+  --color-text-muted:     var(--gray-800);    /* Texto muy suave (pie de página) */
+  --color-text-on-dark:   var(--gray-700);    /* Texto claro sobre fondos oscuros */
+  --color-heading:        var(--black);       /* Titulares principales */
+
+  /* Fondos */
+  --color-bg-page:        var(--white);       /* Fondo del cuerpo de la página */
+  --color-bg-dark:        var(--black);       /* Fondo secciones oscuras (CTA, footer) */
+  --color-bg-darker:      var(--dark);        /* Fondo muy oscuro / gradiente CTA */
+  --color-bg-subtle:      var(--gray-200);    /* Fondo secciones claras */
+  --color-bg-card:        var(--white);       /* Fondo tarjetas / dropdowns */
+
+  /* Bordes */
+  --color-border:         var(--gray-400);    /* Borde por defecto */
+  --color-border-subtle:  var(--gray-500);    /* Borde dropdown / separadores */
+  --color-border-dark:    var(--dark);        /* Borde sobre fondos oscuros */
+
+  /* Aliases legacy (compatibilidad con global.css) */
+  --color-secondary:      var(--black);
+  --color-white:          var(--white);
+  --color-light-gray:     var(--gray-200);
+  --color-medium-gray:    var(--gray-400);
+  --color-dark-gray:      var(--gray-700);
+
+  /* ── Botones ─────────────────────────────────────────────────
+     Tokens específicos para el sistema de botones
+  ──────────────────────────────────────────────────────────── */
+
+  /* Botón primario (fondo naranja) */
+  --btn-primary-bg:           var(--brand-orange);
+  --btn-primary-color:        var(--white);
+  --btn-primary-hover-bg:     var(--brand-orange-hover);
+  --btn-primary-shadow:       0 10px 25px rgba(255, 107, 53, 0.30);
+  --btn-primary-shadow-sm:    0 5px 15px rgba(255, 107, 53, 0.25);
+  --btn-primary-shadow-lg:    0 15px 40px rgba(255, 107, 53, 0.35);
+
+  /* Botón secundario (borde blanco, fondo transparente) */
+  --btn-secondary-bg:         transparent;
+  --btn-secondary-color:      var(--white);
+  --btn-secondary-border:     var(--white);
+  --btn-secondary-hover-bg:   var(--white);
+  --btn-secondary-hover-color: var(--black);
+  --btn-secondary-hover-shadow: 0 10px 25px rgba(255, 255, 255, 0.20);
+
+  /* ── Terceros / Integraciones ────────────────────────────────
+     Colores de servicios externos usados en el proyecto
+  ──────────────────────────────────────────────────────────── */
+  --color-whatsapp:       #25d366;
+  --color-whatsapp-hover: #20ba5a;
+  --color-whatsapp-shadow: rgba(37, 211, 102, 0.40);
+}

@@ -5,36 +5,41 @@ import Hero from '../components/sections/Hero.astro';
 import AboutBusiness from '../components/sections/AboutBusiness.astro';
 import CompanyAbout from '../components/sections/CompanyAbout.astro';
 import Services from '../components/sections/Services.astro';
-import Multimedia from '../components/sections/Multimedia.astro';
+import Projects from '../components/sections/Projects.astro';
 import Benefits from '../components/sections/Benefits.astro';
 import CTA from '../components/sections/CTA.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
+import { type Language } from '../i18n/i18n';
+
+// Obtener idioma de la URL o usar español por defecto
+const lang: Language = (Astro.url.searchParams.get('lang') as Language) || 'es';
 ---
 
 <Layout title="Repanica SL - Alquiler de Plantas Móviles">
   <Header />
-  <Hero />
+  <Hero lang={lang} />
   <AboutBusiness />
   <CompanyAbout />
   <Services />
-  <Multimedia />
+  <Projects />
   <Benefits />
   <CTA />
   <Footer />
   <WhatsAppButton />
 
   <script>
-    // Importar GSAP
+    // Importar GSAP y plugins necesarios
     import gsap from 'gsap';
     import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-    // Esperar a que el DOM esté completamente cargado
-    document.addEventListener('astro:page-load', () => {
-      // Animaciones de scroll para secciones
-      const sections = document.querySelectorAll('.about-business, .company-about, .services, .benefits, .cta');
+    // Función unificada que inicializa todas las animaciones del sitio
+    const initAllAnimations = () => {
+      // 1. Animaciones de scroll para secciones
+      const sections = document.querySelectorAll('.about-business, .company-about, .services, .projects, .benefits, .cta');
       
       sections.forEach((section) => {
         gsap.fromTo(
@@ -57,7 +62,124 @@ import WhatsAppButton from '../components/WhatsAppButton.astro';
         );
       });
 
-      // Animaciones para service cards
+      // 2. Animaciones cinemáticas para cada artículo de la sección about-business
+      const articles = document.querySelectorAll('.business-article');
+      articles.forEach((article) => {
+        const content = article.querySelector('.article-content');
+        const image = article.querySelector('.article-image');
+        const isAlternate = article.classList.contains('article-2');
+        
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: article,
+            start: 'top 65%', /* Se activa más tarde, cuando el artículo está bien centrado en el viewport */
+            toggleActions: 'play none none none'
+          }
+        });
+
+        // Configuración inicial de opacidad cero mediante GSAP para evitar parpadeos en CSS
+        gsap.set(article, { opacity: 0 });
+        if (content) gsap.set(content, { opacity: 0 });
+        if (image) gsap.set(image, { opacity: 0 });
+
+        tl.fromTo(article, 
+          { opacity: 0, y: 50 }, 
+          { opacity: 1, y: 0, duration: 1.2, ease: 'power2.out' } /* Duración ampliada para revelado lento */
+        );
+
+        if (content && image) {
+          tl.fromTo(content,
+            { opacity: 0, x: isAlternate ? 50 : -50 },
+            { opacity: 1, x: 0, duration: 1.5, ease: 'power3.out' }, /* Deslizamientos mucho más pausados y fluidos */
+            '-=0.9'
+          ).fromTo(image,
+            { opacity: 0, x: isAlternate ? -50 : 50 },
+            { opacity: 1, x: 0, duration: 1.5, ease: 'power3.out' }, /* Deslizamiento lento síncrono */
+            '-=1.5'
+          );
+        }
+      });
+
+      // 3. Animación progresiva de aumento de números (Counter Up) para las estadísticas
+      const counters = document.querySelectorAll('.count');
+      counters.forEach((counter) => {
+        const targetVal = parseInt(counter.getAttribute('data-target') || '0', 10);
+        const countObj = { value: 0 };
+        
+        gsap.to(countObj, {
+          value: targetVal,
+          duration: 2.0, /* Duración de 2 segundos para un incremento suave y visible */
+          ease: 'power1.out',
+          scrollTrigger: {
+            trigger: counter,
+            start: 'top 90%',
+            toggleActions: 'play none none none',
+          },
+          onUpdate: () => {
+            counter.textContent = Math.floor(countObj.value).toString();
+          }
+        });
+      });
+
+      // 4. Animación interactiva de las líneas divisorias (Se expanden de izquierda a derecha con el scroll)
+      const dividerLines = document.querySelectorAll('.divider-line');
+      dividerLines.forEach((dividerLine) => {
+        // Determinar qué sección contiene esta línea divisoria
+        const parentSection = dividerLine.closest('section');
+        
+        gsap.fromTo(dividerLine,
+          { scaleX: 0 },
+          {
+            scaleX: 1,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: parentSection,
+              start: 'bottom bottom',
+              end: 'bottom 50%',
+              scrub: 2.5
+            }
+          }
+        );
+      });
+
+      // 5. Animación de los engranajes mecánicos en la sección Services (Rotan y cambian de opacidad al escrolear)
+      const gearTopLeft = document.querySelector('.gear-top-left');
+      if (gearTopLeft) {
+        gsap.fromTo(gearTopLeft,
+          { rotation: 0, opacity: 0 },
+          {
+            rotation: 180,
+            opacity: 0.18, /* Incrementado de 0.08 a 0.18 para que se aprecie mucho más nítido */
+            ease: 'none',
+            scrollTrigger: {
+              trigger: '.services',
+              start: 'top bottom',
+              end: 'top 30%',
+              scrub: 1.5
+            }
+          }
+        );
+      }
+
+      const gearBottomRight = document.querySelector('.gear-bottom-right');
+      if (gearBottomRight) {
+        gsap.fromTo(gearBottomRight,
+          { rotation: 0, opacity: 0.18 }, /* Incrementado de 0.08 a 0.18 */
+          {
+            rotation: -180,
+            opacity: 0,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: '.services',
+              start: 'bottom 90%',
+              end: 'bottom top',
+              scrub: 1.5
+            }
+          }
+        );
+      }
+
+      // 6. Animaciones para service cards
       const serviceCards = document.querySelectorAll('.service-card');
       serviceCards.forEach((card, index) => {
         gsap.fromTo(
@@ -80,7 +202,7 @@ import WhatsAppButton from '../components/WhatsAppButton.astro';
         );
       });
 
-      // Animaciones para benefit items
+      // 7. Animaciones para benefit items
       const benefitItems = document.querySelectorAll('.benefit-item');
       benefitItems.forEach((item, index) => {
         gsap.fromTo(
@@ -102,13 +224,11 @@ import WhatsAppButton from '../components/WhatsAppButton.astro';
           }
         );
       });
-    });
 
-    // Smooth scroll para links de navegación
-    document.addEventListener('astro:page-load', () => {
+      // 8. Smooth scroll para links de navegación
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          const href = this.getAttribute('href');
+        anchor.addEventListener('click', (e) => {
+          const href = anchor.getAttribute('href');
           if (href && href !== '#') {
             e.preventDefault();
             const target = document.querySelector(href);
@@ -124,6 +244,18 @@ import WhatsAppButton from '../components/WhatsAppButton.astro';
           }
         });
       });
-    });
+    };
+
+    // ── Ejecución Segura en Cualquier Ciclo de Vida ───────────────────────
+    
+    // Iniciar inmediatamente si el DOM ya está listo (Astro difiere scripts de forma nativa)
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      initAllAnimations();
+    } else {
+      document.addEventListener('DOMContentLoaded', initAllAnimations);
+    }
+
+    // Soporte para Astro ViewTransitions (si se habilita en el futuro)
+    document.addEventListener('astro:page-load', initAllAnimations);
   </script>
 </Layout>
