@@ -20,6 +20,7 @@
     "@astrojs/react": "^6.0.1",
     "autoprefixer": "^10.5.2",
     "postcss": "^8.5.16",
+    "sharp": "^0.35.3",
     "tailwindcss": "^4.3.2",
     "typescript": "^5.3.3"
   }

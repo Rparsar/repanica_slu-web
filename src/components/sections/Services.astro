@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import mechanicalGear from './src/assets/Mechanical_gear_forming_circle_2K_202607221251.png';
+import mechanicalGear from '../../assets/Mechanical_gear_forming_circle_2K_202607221251.png';
 ---
 
 <section class="services" id="servicios">
@@ -267,11 +267,8 @@ import mechanicalGear from './src/assets/Mechanical_gear_forming_circle_2K_20260
   .service-icon {
     width: 50px;
     height: 50px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     color: var(--color-primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .service-icon svg {
@@ -288,32 +285,18 @@ import mechanicalGear from './src/assets/Mechanical_gear_forming_circle_2K_20260
 
   .service-card p {
     font-size: 0.95rem;
+    color: var(--color-text);
     line-height: 1.6;
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 
   @media (max-width: 1024px) {
     .section-header {
       flex-direction: column;
+      align-items: flex-start;
     }
 
     .view-more-btn {
-      width: 100%;
-      justify-content: center;
-    }
-
-    .section-header h2 {
-      font-size: 1.75rem;
+      align-self: flex-start;
     }
   }
 
@@ -323,32 +306,19 @@ import mechanicalGear from './src/assets/Mechanical_gear_forming_circle_2K_20260
     }
 
     .section-header {
-      gap: 1rem;
+      margin-bottom: 2rem;
     }
 
     .section-header h2 {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
     }
 
     .services-grid {
       grid-template-columns: 1fr;
-      gap: 1.5rem;
     }
 
     .service-card {
       padding: 1.5rem;
-    }
-
-    .service-card h3 {
-      font-size: 1.1rem;
-    }
-
-    .service-card p {
-      font-size: 0.9rem;
-    }
-
-    .view-more-btn {
-      width: 100%;
     }
   }
 </style>
