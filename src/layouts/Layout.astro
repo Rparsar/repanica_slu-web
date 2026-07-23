@@ -14,7 +14,7 @@ const { title, description = "Repanica SL - Alquiler de plantas móviles para ex
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/repanica_favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -34,12 +34,15 @@ const { title, description = "Repanica SL - Alquiler de plantas móviles para ex
       html {
         font-family: 'Rokkitt', serif;
         scroll-behavior: smooth;
+        overflow-x: hidden;
       }
 
       body {
         background-color: var(--color-bg-page);
         color: var(--color-secondary);
         line-height: 1.6;
+        overflow-x: hidden;
+        width: 100%;
       }
 
       h1 {

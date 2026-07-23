@@ -1,7 +1,12 @@
 ---
+import { Image } from 'astro:assets';
+import landing1 from '../../assets/landing1.jpeg';
+import landing2 from '../../assets/landing2.jpeg';
+import landing3 from '../../assets/landing3.jpeg';
+import bgImage from '../../assets/back-section-about.png';
 ---
 
-<section class="about-business" id="init-servicios" style={`--bg-image: url('./src/assets/back-section-about.png')`}>
+<section class="about-business" id="init-servicios" style={`--bg-image: url('${bgImage.src}')`}>
   <div class="about-container">
     <!-- Título y Subtítulo -->
     <div class="section-intro">
@@ -16,14 +21,14 @@
         <p>Somos especialistas en la extracción eficiente de áridos utilizando maquinaria de última generación. Nuestros equipos móviles permiten acceder a zonas de difícil acceso, maximizando la productividad y minimizando el impacto ambiental. Con más de 50 años de experiencia, garantizamos la calidad y seguridad en cada proyecto.</p>
       </div>
       <div class="article-image">
-        <img src="./src/assets/landing1.jpeg" alt="Extracción de Áridos" />
+        <Image src={landing1} alt="Extracción de Áridos" />
       </div>
     </article>
 
     <!-- Article 2: Imagen izquierda, Texto derecha -->
     <article class="business-article article-2">
       <div class="article-image">
-        <img src="./src/assets/landing2.jpeg" alt="Procesamiento y Clasificación" />
+        <Image src={landing2} alt="Procesamiento y Clasificación" />
       </div>
       <div class="article-content">
         <h3>Procesamiento y Clasificación</h3>
@@ -38,7 +43,7 @@
         <p>Ofrecemos soluciones completas de transporte y logística para tus proyectos de extracción. Nuestro equipo profesional se encarga de la planificación, ejecución y seguimiento de cada operation. Disponemos de flota propia y alianzas estratégicas para garantizar entregas puntuales y seguras.</p>
       </div>
       <div class="article-image">
-        <img src="./src/assets/landing3.jpeg" alt="Transporte y Logística" />
+        <Image src={landing3} alt="Transporte y Logística" />
       </div>
     </article>
   </div>
