@@ -8,8 +8,9 @@
     "llamarAhora": "Llamar ahora"
   },
   "hero": {
-    "titulo": "Soluciones en Alquiler de Plantas Móviles",
-    "subtitulo": "Equipos especializados para extracción de áridos con máxima fiabilidad",
+    "titulo1": "Repanica S.L.",
+    "titulo2": "Soluciones en Alquiler de Plantas Móviles",
+    "subtitulo": "Equipos especializados para extracción de áridos",
     "cta": "Solicitar presupuesto"
   },
   "aboutBusiness": {
@@ -147,7 +148,7 @@
       "titulo": "Dónde nos encontramos",
       "subtitulo": "Visítanos en nuestras instalaciones en Orihuela, Alicante",
       "direccion": "Dirección",
-      "direccionValor": "Ctra. de Beniel, Orihuela (Alicante)",
+      "direccionValor": "Ctra. La Aparecida, Orihuela (Alicante)",
       "telefono": "Teléfono",
       "email": "Email",
       "horario": "Horario",

@@ -108,10 +108,14 @@
   /* Contenido de texto - fondo oscuro */
   .article-content {
     padding: 4rem; /* Incrementado de 3rem a 4rem para un diseño editorial premium */
-    background: linear-gradient(to right, #1a1a1a7d 0%, #1a1a1a94 35%, #00000085 70%);
+    background: linear-gradient(to right, #3e1a046f  0%, #3e1a0499  35%, #3e1a04d1  70%);
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .article-2 .article-content{
+    background: linear-gradient(to left, #3e1a046f  0%, #3e1a0499  35%, #3e1a04d1  70%);
   }
 
   .article-content h3 {
@@ -135,6 +139,7 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    opacity: 0.6;
   }
 
   /* Tono oscuro sobre la imagen */
@@ -142,30 +147,25 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: transparent;
     z-index: 1;
   }
 
   /* Degradado de fusión: article-1 y article-3 (imagen derecha → gradiente desde la izquierda) */
-  .article-1 .article-image::after,
-  .article-3 .article-image::after {
+  .article-image::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, #1a1a1a 0%, #1a1a1a66 35%, #0000 70%);
+    background: linear-gradient(to right, #3e1a04d1  0%, #3e1a0400 35%, #0000 70%);
     z-index: 2;
   }
 
   /* Degradado de fusión: article-2 (imagen izquierda → gradiente desde la derecha) */
   .article-2 .article-image::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to left, #1a1a1a 0%, #1a1a1a66 35%, #0000 70%);
-    z-index: 2;
+    background: linear-gradient(to left, #3e1a04d1 0%, #3e1a0400 35%, #0000 70%);
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 900px) {
     .business-article,
     .article-2 {
       grid-template-columns: 1fr;
@@ -176,10 +176,13 @@
     }
 
     /* En móvil el degradado va de arriba (imagen) hacia abajo (texto) */
-    .article-1 .article-image::after,
-    .article-3 .article-image::after,
+    .article-image::after{
+      background: linear-gradient(to bottom, #3e1a04d1 0%, #3e1a0400 35%, #0000 70%);
+    }
+
+    
     .article-2 .article-image::after {
-      background: linear-gradient(to bottom, transparent 40%, rgba(26, 26, 26, 0.8) 75%, rgba(26, 26, 26, 1) 100%);
+      background: linear-gradient(to top, #3e1a04d1 0%, #3e1a0400 35%, #0000 70%);
     }
 
     .article-image {

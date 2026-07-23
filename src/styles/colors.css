@@ -27,6 +27,7 @@
   /* ── Escala de grises ───────────────────────────────────────
      De más claro (100) a más oscuro (900)
   ──────────────────────────────────────────────────────────── */
+  --gray-transparent: #fffdfdb8;
   --gray-100:    #f9f9f9;   /* Fondo tarjetas muy claras */
   --gray-200:    #f5f5f5;   /* Fondo secciones claras */
   --gray-300:    #f0f0f0;   /* Fondo gradiente claro */
@@ -36,6 +37,7 @@
   --gray-700:    #cccccc;   /* Texto sobre fondos oscuros */
   --gray-800:    #999999;   /* Texto muted / pie de página */
   --gray-900:    #666666;   /* Texto secundario genérico */
+  --gray-opacy:  #212121ed;
 
   /* ── Semánticos de uso general ──────────────────────────────
      Aliases con nombre funcional que referencian los valores
@@ -54,13 +56,15 @@
   --color-text-muted:     var(--gray-800);    /* Texto muy suave (pie de página) */
   --color-text-on-dark:   var(--gray-700);    /* Texto claro sobre fondos oscuros */
   --color-heading:        var(--black);       /* Titulares principales */
-
+  --color-content-hero: var(--gray-transparent);
+  
   /* Fondos */
   --color-bg-page:        var(--white);       /* Fondo del cuerpo de la página */
   --color-bg-dark:        var(--black);       /* Fondo secciones oscuras (CTA, footer) */
   --color-bg-darker:      var(--dark);        /* Fondo muy oscuro / gradiente CTA */
   --color-bg-subtle:      var(--gray-200);    /* Fondo secciones claras */
   --color-bg-card:        var(--white);       /* Fondo tarjetas / dropdowns */
+  --color-bg-dark-opacy:  var(--gray-opacy); /* Fondo oscuro con opacidad */
 
   /* Bordes */
   --color-border:         var(--gray-400);    /* Borde por defecto */

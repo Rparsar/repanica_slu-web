@@ -18,10 +18,11 @@ const { lang = 'es' } = Astro.props;
   <div class="hero-side-panel"></div>
   <div class="hero-content">
     <div class="hero-text">
-      <h1 class="hero-title">{t('hero.titulo', lang)}</h1>
+      <h1 class="hero-title">{t('hero.titulo1', lang)}</h1>
+      <h2 class="hero-subtitle">{t('hero.titulo2', lang)}</h2>
       <h3 class="hero-subtitle">{t('hero.subtitulo', lang)}</h3>
       <div class="hero-buttons">
-        <button class="btn btn-primary">{t('hero.cta', lang)}</button>
+        <a href="/contact" class="btn btn-primary">{t('hero.cta', lang)}</a>
         <button class="btn btn-secondary">Más información</button>
       </div>
     </div>
@@ -50,12 +51,13 @@ const { lang = 'es' } = Astro.props;
   }
 
   .hero-overlay {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--color-bg-dark-opacy);
     z-index: 2;
   }
 
@@ -65,13 +67,7 @@ const { lang = 'es' } = Astro.props;
     left: 0;
     width: 65%;
     height: 100%;
-    background: linear-gradient(
-      to right,
-      rgba(45, 45, 45, 0.87) 0%,
-      rgba(51, 51, 51, 0.92) 35%,
-      rgba(24, 24, 24, 0.88) 65%,
-      rgba(19, 19, 19, 0.05) 100%
-    );
+    background: linear-gradient(to right, #2d2d2d 0%, #2d2d2dd9 35%, #2d2d2d61 65%, #13131300 100%);
     z-index: 2;
   }
 
@@ -179,20 +175,6 @@ const { lang = 'es' } = Astro.props;
     }
   }
 
-  @media (max-width: 900px) {
-    .hero-content {
-      padding-left: 1.25rem;
-    }
-
-    .hero-title {
-      font-size: 3rem;
-    }
-
-    .hero-subtitle {
-      font-size: 1.25rem;
-    }
-  }
-
   @media (max-width: 768px) {
     .hero {
       min-height: 80vh;
@@ -212,7 +194,7 @@ const { lang = 'es' } = Astro.props;
     }
 
     .hero-subtitle {
-      font-size: 1.1rem;
+      font-size: 1.8rem;
     }
 
     .hero-buttons {
@@ -227,20 +209,22 @@ const { lang = 'es' } = Astro.props;
   }
 
   @media (max-width: 680px) {
-    .hero-content {
-      padding-left: 0.75rem;
-    }
+    
 
     .hero-title {
       font-size: 2.25rem;
     }
 
     .hero-subtitle {
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
   }
 
   @media (max-width: 600px) {
+    .hero-overlay {
+      display: block;
+    }
+
     .hero-side-panel {
       display: none;
     }
@@ -258,12 +242,8 @@ const { lang = 'es' } = Astro.props;
       justify-content: center;
     }
 
-    .hero-title {
-      font-size: 2rem;
-    }
-
     .hero-subtitle {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
   }
 </style>
